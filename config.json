@@ -1,0 +1,10 @@
+{
+    "DB_HOST": "database host ip:port",
+    "DB_USERNAME": "database username",
+    "DB_NAME": "name of the k4 database",
+    "DB_PASS": "database user password",
+
+    "DISCORD_TOKEN": "Your discord bot token",
+
+    "SERVER_NAME": "nn.dog"
+}

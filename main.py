@@ -83,11 +83,11 @@ async def stats(interaction: discord.Interaction) -> None:
     
   cur = conn.cursor()
     
-  cur.execute(f"SELECT * FROM k4ranks WHERE `steam_id` = '{steam_account["id"]}'")
+  cur.execute(f"""SELECT * FROM k4ranks WHERE `steam_id` = '{steam_account["id"]}'""")
     
   rows = cur.fetchall()
     
-  cur.execute(f"SELECT * FROM k4stats WHERE `steam_id` = '{steam_account["id"]}'")
+  cur.execute(f"""SELECT * FROM k4stats WHERE `steam_id` = '{steam_account["id"]}'""")
     
   rows_stats = cur.fetchall()
     
@@ -98,7 +98,7 @@ async def stats(interaction: discord.Interaction) -> None:
     await interaction.response.send_message("Couldnt find any data related to your account")
     
   embed = discord.Embed(
-        title=f"Results for your account: {steam_account["name"]}",
+        title=f"""Results for your account: {steam_account["name"]}""",
         color=discord.Color.blue()
       )
   embed.add_field(name="Account:", value=f"[{rows[0][2]}](https://steamcommunity.com/profiles/{rows[0][1]})", inline=False)

@@ -5,6 +5,7 @@
     "DB_PASS": "database user password",
 
     "DISCORD_TOKEN": "Your discord bot token",
+    "USER_TOKEN" : "Discord token of a user account to get linked accounts of users (account has to be in the same discord)",
 
     "SERVER_NAME": "nn.dog"
 }
